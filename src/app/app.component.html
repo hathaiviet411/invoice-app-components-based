@@ -1,0 +1,15 @@
+<div class="container">
+  <header-inovice [Customer]="Customer" [TotalBalanceDue]="TotalBalanceDue"></header-inovice>
+  <body-inovice [Items]="Items"></body-inovice>
+  <balance-inovice [Items]="Items" [OtherChanges]="OtherChanges" (Total)="setTotal($event)" (AmountPaid)="setAmountPaid($event)"></balance-inovice>
+
+  <div class="zone-invoice__footer col">
+    <div class="row">
+      <p class="note">Note:</p>
+    </div>
+
+    <div class="row">
+      <p class="show-note">{{ Items.note }}</p>
+    </div>
+  </div>
+</div>
